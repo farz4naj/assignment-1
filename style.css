@@ -1,0 +1,471 @@
+:root {
+  --bg: #f7f5ef;
+  --surface: #ffffff;
+  --text: #20352f;
+  --muted: #718078;
+  --primary: #176b63;
+  --accent: #c59b55;
+  --border: #e8e5dc;
+  --shadow: 0 12px 35px rgba(30, 50, 42, 0.09);
+}
+
+body.dark {
+  --bg: #14221f;
+  --surface: #20332e;
+  --text: #f3f0e8;
+  --muted: #bdc8c0;
+  --primary: #65b7a6;
+  --accent: #e0b86f;
+  --border: #354941;
+  --shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.header {
+  height: 78px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+.theme-btn,
+.menu-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 9px 13px;
+  border-radius: 50px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.hero {
+  min-height: 610px;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(8, 27, 25, .88), rgba(8, 27, 25, .28)),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Band-e-Amir_Afghanistan.jpg")
+    center/cover;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.12;
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  color: #e2bd7d;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 540px;
+  color: #eee;
+  margin-bottom: 32px;
+}
+
+.main-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: .25s;
+}
+
+.main-btn:hover {
+  background: #104c46;
+  transform: translateY(-2px);
+}
+
+.intro {
+  max-width: 800px;
+  margin: auto;
+  padding: 100px 25px;
+  text-align: center;
+}
+
+.intro h2,
+.section-heading h2,
+.contact h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4vw, 43px);
+  margin-bottom: 22px;
+}
+
+.intro > p:last-child {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.discover {
+  padding: 80px 8%;
+  background: var(--surface);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: var(--bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-info {
+  padding: 23px;
+}
+
+.card-category {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.card button {
+  margin-top: 18px;
+  background: transparent;
+  color: var(--primary);
+  border: none;
+  font-weight: 700;
+}
+
+.photo-credit {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 12px;
+}
+
+.quote-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: #183e37;
+  color: white;
+}
+
+.quote-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 4vw, 43px);
+  line-height: 1.5;
+}
+
+.contact {
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.contact > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+form {
+  max-width: 550px;
+  margin: 35px auto 0;
+  display: grid;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+form button {
+  justify-self: center;
+}
+
+#formMessage {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+footer {
+  background: #102c27;
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+footer p {
+  margin-top: 15px;
+  color: #c4d0ca;
+  font-size: 13px;
+}
+
+.copyright {
+  font-size: 11px;
+  opacity: .7;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, .78);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 650px;
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  animation: appear .25s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.modal-info {
+  padding: 25px;
+}
+
+.modal-info h2 {
+  font-family: "Playfair Display", serif;
+  margin: 10px 0;
+}
+
+.modal-info p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  border: none;
+  background: white;
+  color: #222;
+  font-size: 28px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 850px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 5%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: var(--surface);
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 550px;
+    padding: 65px 7%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .discover {
+    padding: 65px 6%;
+  }
+
+  .modal-content img {
+    height: 220px;
+  }
+}

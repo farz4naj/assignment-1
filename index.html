@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safar Afghanistan | Discover Afghan Heritage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">SAFAR<span> AFGHANISTAN</span></a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#discover">Discover</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">A LAND OF HISTORY AND CULTURE</p>
+        <h1>Discover the Beauty of <span>Afghanistan</span></h1>
+        <p class="hero-description">
+          Explore Afghanistan's remarkable landscapes, historic architecture,
+          rich traditions, and cultural heritage through a virtual journey.
+        </p>
+        <a href="#discover" class="main-btn">Explore Afghanistan ↓</a>
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <p class="eyebrow">WELCOME TO AFGHANISTAN</p>
+      <h2>Where History Meets Natural Beauty</h2>
+      <p>
+        From turquoise lakes and ancient monuments to beautiful mosques
+        and historic cities, Afghanistan holds centuries of stories.
+        Discover some of its most remarkable places through this
+        educational showcase.
+      </p>
+    </section>
+
+    <section class="discover" id="discover">
+      <div class="section-heading">
+        <p class="eyebrow">EXPLORE THE COUNTRY</p>
+        <h2>Places Worth Discovering</h2>
+        <p>Explore six remarkable places in Afghanistan.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="All">All Places</button>
+        <button class="filter-btn" data-filter="Nature">Nature</button>
+        <button class="filter-btn" data-filter="Heritage">Heritage</button>
+        <button class="filter-btn" data-filter="Cities">Cities</button>
+      </div>
+
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section class="quote-section">
+      <p class="eyebrow">A COUNTRY OF MANY STORIES</p>
+      <h2>Every place has a story.<br>Every story deserves to be remembered.</h2>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2>Share Your Thoughts</h2>
+      <p>Have a question or an idea about Afghan history and culture?</p>
+
+      <form id="form">
+        <input type="text" id="name" placeholder="Your name" required>
+        <input type="email" id="email" placeholder="Your email" required>
+        <textarea id="message" placeholder="Write your message..." required></textarea>
+        <button type="submit" class="main-btn">Send Message</button>
+        <p id="formMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">SAFAR<span> AFGHANISTAN</span></a>
+    <p>Celebrating Afghanistan's history, nature, and culture.</p>
+    <p class="copyright">© 2026 Safar Afghanistan. Educational showcase.</p>
+  </footer>
+
+  <!-- Destination details popup -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="mClose" aria-label="Close">×</button>
+      <img id="mImg" src="" alt="">
+      <div class="modal-info">
+        <span id="mMeta"></span>
+        <h2 id="mTitle"></h2>
+        <p id="mText"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
